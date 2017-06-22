@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th ="www.thymeleaf.org">
+<head th:replace="base :: head" >
+    <meta charset="UTF-8" />
+    <title>Display Result</title>
+</head>
+<body>
+<table class="table table-striped">
+    <tr>
+        <th>userName</th>
+        <th>password</th>
+    </tr>
+    <tr th:each="persons : ${person}">
+        <td th:text="${persons.userName}"></td>
+        <td th:text="${persons.password}"></td>
+    </tr>
+</table>
+</body>
+</html>
